@@ -1,6 +1,41 @@
---[鬼脚本]--
---[鬼脚本作者：鬼]--
---[鬼脚本作者QQ：3368904118]--
---[鬼脚本禁止倒卖，永久免费（除了高级版）]--
---[欢迎大家使用😊😊😊]--
+local AkaliNotif = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/Dynissimo/main/Scripts/AkaliNotif.lua"))()
 
+local Notify = AkaliNotif.Notify
+local Players = game:GetService("Players")
+local PL = Players.LocalPlayer
+Notify({
+    Description = " 正在验证白名单等待3-5秒 ";
+    Title = "尊敬的鬼脚本高级版用户";
+    Duration = 4;
+});
+  wait(5)
+
+local Allowed = loadstring(game:HttpGet("https://shz.al/~Ghost-WhiteList/"))()--白名单用户链接
+if Allowed[PL.Name] then
+Notify({
+    Description = " 验证成功\n 欢迎尊敬的鬼脚本高级版白名单用户\n 正在加载鬼脚本高级版......";
+    Title = " 验证结果";
+    Duration = 4;
+});
+  wait(5)
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaopi77/xiaopi77/main/QQ1002100032-Roblox-Pi-script.lua"))()--脚本链接
+Notify({
+    Description = " 欢迎使用鬼脚本高级版";
+    Title = "欢迎！";
+    Duration = 5;
+});
+  wait(1)
+else
+setclipboard("3368904118")
+Notify({
+    Description = " 验证失败\n 已复制鬼的qq号\n 请去找鬼买白名单";
+    Title = "验证结果";
+    Duration = 5;
+});
+Notify({
+    Description = " 想玩的去找鬼买";
+    Title = "验证结果";
+    Duration = 4;
+});
+  wait(5)
+end
